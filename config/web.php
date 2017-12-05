@@ -43,16 +43,24 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        */
+//        'urlManager' => [
+//            'class' => 'yii\web\UrlManager',
+//            'enablePrettyUrl' => true,
+//            'showScriptName' => false,
+//            'enableStrictParsing' => false,
+//            'rules' => [
+//            ],
+//        ],
     ],
     'params' => $params,
+    'modules' => [
+        'csuser' => [
+            'class' => 'app\modules\user\Module',
+        ],
+        'csloan' => [
+            'class' => 'app\modules\loan\Module',
+        ],
+    ],
 ];
 
 if (YII_ENV_DEV) {
@@ -62,6 +70,7 @@ if (YII_ENV_DEV) {
         'class' => 'yii\debug\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['192.168.50.1'],
     ];
 
     $config['bootstrap'][] = 'gii';
@@ -69,6 +78,7 @@ if (YII_ENV_DEV) {
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['192.168.50.1'],
     ];
 }
 
