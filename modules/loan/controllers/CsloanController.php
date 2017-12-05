@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\user\controllers;
+namespace app\modules\loan\controllers;
 
 use Yii;
 use app\models\CSLoan;
@@ -10,9 +10,9 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * CSLoanController implements the CRUD actions for CSLoan model.
+ * CsloanController implements the CRUD actions for CSLoan model.
  */
-class CSLoanController extends Controller
+class CsloanController extends Controller
 {
     /**
      * @inheritdoc

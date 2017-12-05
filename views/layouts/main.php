@@ -40,20 +40,24 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => Url::to(['/site/index']) ],
+
+            ['label' => 'Users', 'url' => Url::to(['/csuser/csuser/index']) ],
+            ['label' => 'Loans', 'url' => Url::to(['/csloan/csloan/index']) ],
+
             ['label' => 'About', 'url' => Url::to(['/site/about']) ],
             ['label' => 'Contact', 'url' => Url::to(['/site/contact']) ],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => Url::to(['/site/login']) ]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
+//            Yii::$app->user->isGuest ? (
+//                ['label' => 'Login', 'url' => Url::to(['/site/login']) ]
+//            ) : (
+//                '<li>'
+//                . Html::beginForm(['/site/logout'], 'post')
+//                . Html::submitButton(
+//                    'Logout (' . Yii::$app->user->identity->username . ')',
+//                    ['class' => 'btn btn-link logout']
+//                )
+//                . Html::endForm()
+//                . '</li>'
+//            )
         ],
     ]);
     NavBar::end();

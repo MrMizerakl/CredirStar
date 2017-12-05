@@ -10,9 +10,9 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * CSUserController implements the CRUD actions for CSUser model.
+ * CsuserController implements the CRUD actions for CSUser model.
  */
-class CSUserController extends Controller
+class CsuserController extends Controller
 {
     /**
      * @inheritdoc
